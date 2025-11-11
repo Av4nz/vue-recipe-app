@@ -10,4 +10,8 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 
+import { useTheme } from './composables/useTheme';
+const { theme, setTheme} = useTheme();
+setTheme(theme.value)
+
 app.mount('#app')
